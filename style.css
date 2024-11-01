@@ -9,34 +9,34 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     background: #07B6D5;
+    padding: 20px;
 }
 
 .game-container {
     text-align: center;
+    width: 100%;
     max-width: 600px;
     color: white;
-    padding: 10px;
 }
 
 h1 {
     margin-bottom: 20px;
-    font-size: 2.5em;
+    font-size: 2em;
     font-weight: bold;
     color: white;
 }
 
 .score-board {
     margin-bottom: 20px;
-    padding: 10px 20px;
-    font-size: 1.5em;
+    padding: 10px;
+    font-size: 1.2em;
     font-weight: bold;
     border-radius: 8px;
     background-color: white;
     color: #07B6D5;
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.15);
-    display: inline-block;
 }
 
 #score {
@@ -47,31 +47,30 @@ h1 {
     display: grid;
     gap: 10px;
     justify-content: center;
+    width: 100%;
+    max-width: 100vw;
+    max-height: 70vh;
+    padding: 10px;
 }
 
-/* Responsive grid layout for different devices */
+/* Dynamische kolommen om schermruimte optimaal te benutten */
 @media (min-width: 768px) {
     .game-board {
-        grid-template-columns: repeat(4, 140px);
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
-@media (max-width: 767px) and (min-width: 481px) {
+@media (max-width: 767px) {
     .game-board {
-        grid-template-columns: repeat(3, 110px);
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
-@media (max-width: 480px) {
-    .game-board {
-        grid-template-columns: repeat(4, 70px); /* Adjust for smaller screens */
-    }
-}
-
+/* Kaartjes worden dynamisch geschaald en houden vierkante vorm */
 .card {
-    position: relative;
     width: 100%;
-    padding-top: 100%; /* Maintain square aspect ratio */
+    padding-top: 100%; /* Vierkante aspect ratio */
+    position: relative;
     border-radius: 10px;
     box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.2);
     cursor: pointer;
@@ -119,7 +118,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.9em;
+    font-size: 1em;
     color: #07B6D5;
     box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.1);
 }
