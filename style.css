@@ -118,9 +118,14 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1em;
+    font-size: 0.9em;
     color: #07B6D5;
     box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    word-break: break-word; /* Forceer langere woorden op een nieuwe regel */
+    padding: 5px;
+    font-size: 0.8em; /* Pas lettergrootte aan */
+    line-height: 1.1em; /* Verminder lijnafstand voor meer ruimte */
 }
 
 .card-back img {
