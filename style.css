@@ -45,26 +45,26 @@ h1 {
 
 .game-board {
     display: grid;
-    gap: 15px;
+    gap: 10px;
     justify-content: center;
 }
 
-/* Responsive grid layout */
+/* Responsive grid layout for different devices */
 @media (min-width: 768px) {
     .game-board {
-        grid-template-columns: repeat(4, 150px);
+        grid-template-columns: repeat(4, 140px);
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767px) and (min-width: 481px) {
     .game-board {
-        grid-template-columns: repeat(3, 100px);
+        grid-template-columns: repeat(3, 110px);
     }
 }
 
 @media (max-width: 480px) {
     .game-board {
-        grid-template-columns: repeat(2, 90px);
+        grid-template-columns: repeat(4, 70px); /* Adjust for smaller screens */
     }
 }
 
@@ -72,7 +72,7 @@ h1 {
     position: relative;
     width: 100%;
     padding-top: 100%; /* Maintain square aspect ratio */
-    border-radius: 15px;
+    border-radius: 10px;
     box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     perspective: 1000px;
@@ -99,8 +99,8 @@ h1 {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    border-radius: 15px;
-    border: 3px solid #07B6D5;
+    border-radius: 10px;
+    border: 2px solid #07B6D5;
 }
 
 .card-front {
@@ -108,7 +108,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2em;
+    font-size: 1em;
     color: white;
     font-weight: bold;
 }
@@ -119,7 +119,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1em;
+    font-size: 0.9em;
     color: #07B6D5;
     box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.1);
 }
@@ -132,8 +132,8 @@ h1 {
 
 button.restart-btn {
     margin-top: 20px;
-    padding: 12px 25px;
-    font-size: 1.1em;
+    padding: 10px 20px;
+    font-size: 1em;
     font-weight: bold;
     color: #07B6D5;
     border: 2px solid white;
